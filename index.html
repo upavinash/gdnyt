@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message for Annu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            max-width: 600px;
+            animation: fadeIn 1.5s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(45deg);
+            animation: shimmer 10s infinite linear;
+            opacity: 0.5;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #ffd700;
+            margin-bottom: 25px;
+            font-size: 3em;
+            text-shadow: 0 0 10px rgba(255,215,0,0.7);
+            animation: pulse 2s infinite ease-in-out;
+        }
+        p {
+            font-size: 1.3em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+        }
+        
+        .highlight {
+            font-weight: bold;
+        }
+
+        .blinking {
+            animation: colorfulBlinker 3s linear infinite; 
+        }
+
+        @keyframes colorfulBlinker {
+            0%   { color: #ff6b6b; text-shadow: 0 0 7px rgba(255,107,107,0.7); opacity: 1; }
+            20%  { color: #f7b731; text-shadow: 0 0 7px rgba(247,183,49,0.7); opacity: 1; }
+            40%  { color: #34e7e4; text-shadow: 0 0 7px rgba(52,231,228,0.7); opacity: 1; }
+            50%  { color: #34e7e4; text-shadow: 0 0 7px rgba(52,231,228,0.7); opacity: 0; }
+            60%  { color: #8a2be2; text-shadow: 0 0 7px rgba(138,43,226,0.7); opacity: 1; }
+            80%  { color: #ff69b4; text-shadow: 0 0 7px rgba(255,105,180,0.7); opacity: 1; }
+            100% { color: #ff6b6b; text-shadow: 0 0 7px rgba(255,107,107,0.7); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes shimmer {
+            0% { transform: rotate(0deg) translate(-50%, -50%); }
+            100% { transform: rotate(360deg) translate(-50%, -50%); }
+        }
+    </style>
+</head>
+<body>
+
+    <audio autoplay loop>
+        <source src="your-music-file.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container">
+        <h1>GOOD NIGHT BRO</h1> 
+        <p>
+            You are one of the Respected MITTAR
+            <br>
+            
+        </p>
+        <p>
+            Please <span class="highlight blinking">APNA DYAN RAKHNA</span>
+            <br>
+            and <span class="highlight blinking">ALWAYS STAY HAPPY</span>.
+        </p>
+        <p>Sweetest dreams bro........</p>
+    </div>
+
+</body>
+</html>
